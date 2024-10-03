@@ -1,4 +1,4 @@
-import React, { useState } from 'react'
+import React, {Component} from 'react';
 
 
 class UserProfile extends Component {
@@ -6,32 +6,22 @@ class UserProfile extends Component {
         super(props);
         this.state = { name: 'Alex' };
     }
-    const originalName = "Alex"
-    const [name, setName] = useState(originalName)
-    const [change, setChange] = useState(true)
-    
 
-   
-    const changeName = () => {
-        setName("Charlie")
-        if (change){
-            setName("Alex")
-            setChange(false)
-        }else{
-            setName("Charlie")
-            setChange(true)
-        }
-
+    // Incorrect function
+    changeName = () => {
+        this.setState({name: 'Charlie'});
 
     }
 
     render() {
         return (
-            <div>
-                <h1>User Profile</h1>
+            <div className={styles.profile}>
+                <h1>User</h1>
                 <p>Name: {this.state.name}</p>
-                <button onClick={this.changeName}>Change Name</button>
+                <button onClick={this.changeName}>Change the Name</button>
             </div>
         );
     }
 }
+
+export default UserProfile

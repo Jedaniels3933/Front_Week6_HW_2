@@ -1,12 +1,15 @@
-import React from 'react'
-import UserProfile from './components/UserProfile.jsx'
-import MoviesList from './components/MoviesList.jsx'
+import React from 'react';
+import UserProfile from './components/UserProfile';
+import MoviesList from './components/MoviesList';
 
-const App = () => {
+
+function App() {
+
   return (
-    <div>
-      
-    </div>
+    <>
+      <UserProfile/>
+      <MoviesList/>
+    </>
   )
 }
 
